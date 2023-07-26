@@ -1,13 +1,23 @@
 .wallet-container{
     max-width:70%;
-    /* border:1px solid black; */
     margin:0 auto;
+    padding:2rem 0;
 }
 
 .wallet-action-bar{
     display: flex;
     justify-content: space-between;
     max-width:100%;
-    /* border:1px solid #DDD; */
+    margin: 4rem 0;
 }
 
+.coin-chart-container{
+    margin:4rem 0;
+}
+
+@media(max-width:500px){
+    .wallet-container{
+        max-width:90%;
+        padding:1rem 0;
+    }
+}

@@ -4,7 +4,7 @@ function CardTitle({title, avatar, currency}) {
   return (
     <div className="card-header">
       <div className="card-title">
-        <img src={avatar} width="40px" height="40px" alt="coin-logo"/>
+        <img src={avatar} width="40px" height="40px" alt="coinLogo"/>
         <h4>{title}</h4>
       </div>
       <span>{currency}</span>

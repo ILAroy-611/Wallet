@@ -9,7 +9,7 @@ function CoinCard({ children, title, extra }) {
         style={{
           width: '100%',
           margin: '2rem auto',
-          padding:'1rem 4rem'
+          padding:'1rem'
         }}
         title={title}
       >
