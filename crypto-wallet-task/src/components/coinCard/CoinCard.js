@@ -8,7 +8,8 @@ function CoinCard({ children, title, extra }) {
         hoverable
         style={{
           width: '100%',
-          margin: '0 auto',
+          margin: '2rem auto',
+          padding:'1rem 4rem'
         }}
         title={title}
       >

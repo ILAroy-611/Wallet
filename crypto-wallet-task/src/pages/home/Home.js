@@ -6,13 +6,16 @@ import CardTitle from "./component/card-title/CardTitle";
 import CardContent from "./component/card-content/CardContent";
 import FrequencyTab from "../../components/frequncyTab/FrequencyTab";
 import { items } from "./helper";
-import { BsCurrencyDollar } from "react-icons/bs";
 import "./home.css";
+import CoinButton from "./component/coinButton/CoinButton";
 
 function Home() {
-  // const {response} = useCrypto();
+  const { coinDetail } = useCrypto();
   const [showBtns, setShowBtns] = useState(false);
 
+  const {market_data} = {...coinDetail}
+
+  // console.log(coinDetail);
   const handleTabChange = (key) => {
     console.log(key);
   };
@@ -25,11 +28,25 @@ function Home() {
       <div className="wallet-card">
         <CoinCard
           title={
-            <CardTitle title="Bitcoin" avatar="bitcoin.png" currency="BTC" />
+            <CardTitle
+              title={coinDetail?.name}
+              avatar={coinDetail?.image?.small}
+              currency={
+                coinDetail?.symbol ? coinDetail?.symbol.toUpperCase() : ""
+              }
+            />
           }
         >
-          <CardContent handleDownArrowClick={handleDownArrowClick} />
-          {showBtns ? <>Hello</> : null}
+          <CardContent
+            market_data={market_data}
+            showBtns={showBtns}
+            handleDownArrowClick={handleDownArrowClick}
+          />
+          {showBtns ? (
+            <div className="wallet-action-bar">
+              <CoinButton coinDetail={coinDetail} />
+            </div>
+          ) : null}
         </CoinCard>
       </div>
       <div className="coin-chart-container">
@@ -38,18 +55,7 @@ function Home() {
         </div>
         <div className="coin-chart"></div>
         <div className="wallet-action-bar">
-          <div className="btn-container">
-            <BsCurrencyDollar className="dollar-style buy-dollar-style" />
-            <WalletBtn block={true} size="large" type="text">
-              <p className="btn-text">Buy BTC</p>
-            </WalletBtn>
-          </div>
-          <div className="btn-container">
-            <BsCurrencyDollar className="dollar-style sell-dollar-style" />
-            <WalletBtn block={true} size="large" type="text">
-            <p className="btn-text">Sell BTC</p>
-            </WalletBtn>
-          </div>
+          <CoinButton coinDetail={coinDetail} />
         </div>
       </div>
     </div>

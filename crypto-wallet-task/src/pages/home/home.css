@@ -8,38 +8,6 @@
     display: flex;
     justify-content: space-between;
     max-width:100%;
+    /* border:1px solid #DDD; */
 }
 
-.btn-container{
-    display: block;
-    padding:2rem;
-    height:14rem;
-    width:45%;
-    /* border:1px solid black; */
-    border-radius: 1.6rem;
-    background-color: #FFF;
-    cursor: pointer;
-}
-
-.dollar-style{
-    font-size: 5rem;
-    font-weight: 700 !important;
-    padding:1.2rem;
-    border-radius: 50%;
-    color:#FFF;
-}
-
-.buy-dollar-style{
-    background-color: #1677ff;
-}
-
-.sell-dollar-style{
-background-color:#EC008C;
-}
-
-.btn-text{
-    font-size: 1.8rem;
-    font-weight: bold;
-    letter-spacing: -0.5px;
-    color:#777;
-}

@@ -1,3 +1,29 @@
-.card-content{
-    
+.wallet-coin{
+    font-size:3rem;
+    font-weight: 600;
+    color:#555;
+    text-align: justify;
+}
+
+.coin-price{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color:#888;
+    text-align: justify;
+}
+
+.wallet-coin-price-container{
+    display:flex;
+    justify-content: space-between;
+}
+
+.coin-price-change{
+    background-color: crimson;
+    display:inline-block;
+    height:4rem;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    color:white;
+    font-weight: 500;
+    font-size: 1.8rem;
 }
