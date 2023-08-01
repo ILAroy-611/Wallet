@@ -1,0 +1,14 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  background-color: #DDD;
+  width:80%;
+  margin:0 auto;
+  height: 100vh;
+}
+

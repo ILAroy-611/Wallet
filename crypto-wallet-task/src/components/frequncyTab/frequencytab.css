@@ -1,0 +1,35 @@
+.tab-bar-style{
+    justify-content: space-between !important;
+    align-items: center;
+}
+
+.ant-tabs-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+    width: 100%;
+    background-color: #DDD;
+}
+.ant-tabs-tab{
+    border:none;
+    width: 100%;
+    justify-content: center;
+    color:#555;
+    transition: 0.3s all ease-in-out;
+    margin:1rem;
+    height: 1rem;
+}
+.ant-tabs-tab:hover,
+.ant-tabs-tab-active{
+    background-color: #555 !important;
+    border-radius: 2rem;
+    color:white !important; 
+}
+
+.ant-tabs-tab-active{
+    background-color: #FFF !important;
+}
+
+.ant-tabs-content-holder{
+    width:70%;
+}
